@@ -1,0 +1,515 @@
+version 2
+run canvas-0-20221105-12:16:37-7828
+attr configname canvas
+attr datetime 20221105-12:16:37
+attr experiment canvas
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network Scenario
+attr processid 7828
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.visualizer.*.obstacleLossVisualizer.displayIntersections true
+param *.visualizer.*.obstacleLossVisualizer.displayFaceNormalVectors true
+param *.visualizer.*.obstacleLossVisualizer.intersectionLineColor "\"yellow\""
+param *.visualizer.*.mediumVisualizer.signalPropagationAnimationSpeed 500/3e8
+param *.visualizer.*.mediumVisualizer.signalTransmissionAnimationSpeed 50000/3e8
+param *.visualizer.*.mediumVisualizer.displaySignals true
+param *.visualizer.canvasVisualizer.mediumVisualizer.displaySignalDepartures false
+param *.visualizer.canvasVisualizer.mediumVisualizer.displaySignalArrivals false
+param *.visualizer.*.physicalLinkVisualizer.displayLinks true
+param *.visualizer.osgVisualizer.typename "\"\""
+param *.node[*].numApps 1
+param *.node[*].app[0].typename "\"org.car2x.veins.subprojects.veins_inet.VeinsInetSampleApplication\""
+param *.node[*].app[0].interface "\"wlan0\""
+param *.node[*].wlan[0].opMode "\"p\""
+param *.node[*].wlan[0].radio.typename "\"Ieee80211DimensionalRadio\""
+param *.node[*].wlan[0].radio.bandName "\"5.9 GHz\""
+param *.node[*].wlan[0].radio.channelNumber 3
+param *.node[*].wlan[0].radio.transmitter.power 20mW
+param *.node[*].wlan[0].radio.bandwidth "10 MHz"
+param *.node[*].wlan[*].radio.antenna.mobility.typename "\"AttachedMobility\""
+param *.node[*].wlan[*].radio.antenna.mobility.mobilityModule "\"^.^.^.^.mobility\""
+param *.node[*].wlan[*].radio.antenna.mobility.offsetX -2.5m
+param *.node[*].wlan[*].radio.antenna.mobility.offsetZ 1.5m
+param *.node[*].wlan[*].radio.antenna.mobility.constraintAreaMinX 0m
+param *.node[*].wlan[*].radio.antenna.mobility.constraintAreaMaxX 0m
+param *.node[*].wlan[*].radio.antenna.mobility.constraintAreaMinY 0m
+param *.node[*].wlan[*].radio.antenna.mobility.constraintAreaMaxY 0m
+param *.node[*].wlan[*].radio.antenna.mobility.constraintAreaMinZ 0m
+param *.node[*].wlan[*].radio.antenna.mobility.constraintAreaMaxZ 0m
+param *.node[*].ipv4.configurator.typename "\"HostAutoConfigurator\""
+param *.node[*].ipv4.configurator.interfaces "\"wlan0\""
+param *.node[*].ipv4.configurator.mcastGroups "\"224.0.0.1\""
+param *.node[*].mobility.typename "\"VeinsInetMobility\""
+param *.manager.updateInterval 0.1s
+param *.manager.host "\"localhost\""
+param *.manager.port 9999
+param *.manager.autoShutdown true
+param *.manager.launchConfig "xmldoc(\"square.launchd.xml\")"
+param *.manager.moduleType "\"org.car2x.veins.subprojects.veins_inet.VeinsInetCar\""
+param *.physicalEnvironment.config "xmldoc(\"obstacles.xml\")"
+param *.radioMedium.obstacleLoss.typename "\"IdealObstacleLoss\""
+
+vector 0 Scenario.node[0].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 1 Scenario.node[0].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 2 Scenario.node[0].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 3 Scenario.node[0].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 4 Scenario.node[1].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 5 Scenario.node[1].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 6 Scenario.node[1].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 7 Scenario.node[1].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 8 Scenario.node[2].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 9 Scenario.node[2].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 10 Scenario.node[2].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 11 Scenario.node[2].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 12 Scenario.node[3].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 13 Scenario.node[3].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 14 Scenario.node[3].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 15 Scenario.node[3].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 16 Scenario.node[4].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 17 Scenario.node[4].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 18 Scenario.node[4].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 19 Scenario.node[4].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+vector 20 Scenario.node[5].wlan[0].radio radioMode:vector ETV
+attr interpolationmode sample-hold
+attr source radioModeChanged
+attr title "Radio mode, vector"
+vector 21 Scenario.node[5].wlan[0].radio radioChannel:vector ETV
+attr interpolationmode sample-hold
+attr source radioChannelChanged
+attr title "Radio channel, vector"
+vector 22 Scenario.node[5].wlan[0].radio receptionState:vector ETV
+attr interpolationmode sample-hold
+attr source receptionStateChanged
+attr title "Radio reception state, vector"
+vector 23 Scenario.node[5].wlan[0].mac.dcf.recoveryProcedure contentionWindowChanged:vector ETV
+attr interpolationmode sample-hold
+attr title "contention window, vector"
+0	2	0.1	0
+0	2	0.1	0
+0	2	0.1	2
+1	2	0.1	3
+2	2	0.1	1
+3	2	0.1	15
+4	15	1.1	0
+4	15	1.1	0
+4	15	1.1	2
+5	15	1.1	3
+6	15	1.1	1
+7	15	1.1	15
+8	28	2.1	0
+8	28	2.1	0
+8	28	2.1	2
+9	28	2.1	3
+10	28	2.1	1
+11	28	2.1	15
+12	41	3.1	0
+12	41	3.1	0
+12	41	3.1	2
+13	41	3.1	3
+14	41	3.1	1
+15	41	3.1	15
+16	54	4.1	0
+16	54	4.1	0
+16	54	4.1	2
+17	54	4.1	3
+18	54	4.1	1
+19	54	4.1	15
+20	67	5.1	0
+20	67	5.1	0
+20	67	5.1	2
+21	67	5.1	3
+22	67	5.1	1
+23	67	5.1	15
+vector 24 Scenario.node[0].app[0] throughput:vector ETV
+attr source throughput(packetReceived)
+attr title "throughput, vector"
+attr unit bps
+vector 25 Scenario.node[1].app[0] throughput:vector ETV
+attr source throughput(packetReceived)
+attr title "throughput, vector"
+attr unit bps
+vector 26 Scenario.node[2].app[0] throughput:vector ETV
+attr source throughput(packetReceived)
+attr title "throughput, vector"
+attr unit bps
+vector 27 Scenario.node[3].app[0] throughput:vector ETV
+attr source throughput(packetReceived)
+attr title "throughput, vector"
+attr unit bps
+vector 28 Scenario.node[4].app[0] throughput:vector ETV
+attr source throughput(packetReceived)
+attr title "throughput, vector"
+attr unit bps
+vector 29 Scenario.node[5].app[0] throughput:vector ETV
+attr source throughput(packetReceived)
+attr title "throughput, vector"
+attr unit bps
+24	67	0.1	0
+24	67	0.2	0
+24	67	0.3	0
+24	67	0.4	0
+24	67	0.5	0
+24	67	0.6	0
+24	67	0.7	0
+24	67	0.8	0
+24	67	0.9	0
+24	67	1	0
+24	67	1.1	0
+24	67	1.2	0
+24	67	1.3	0
+24	67	1.4	0
+24	67	1.5	0
+24	67	1.6	0
+24	67	1.7	0
+24	67	1.8	0
+24	67	1.9	0
+24	67	2	0
+24	67	2.1	0
+24	67	2.2	0
+24	67	2.3	0
+24	67	2.4	0
+24	67	2.5	0
+24	67	2.6	0
+24	67	2.7	0
+24	67	2.8	0
+24	67	2.9	0
+24	67	3	0
+24	67	3.1	0
+24	67	3.2	0
+24	67	3.3	0
+24	67	3.4	0
+24	67	3.5	0
+24	67	3.6	0
+24	67	3.7	0
+24	67	3.8	0
+24	67	3.9	0
+24	67	4	0
+24	67	4.1	0
+24	67	4.2	0
+24	67	4.3	0
+24	67	4.4	0
+24	67	4.5	0
+24	67	4.6	0
+24	67	4.7	0
+24	67	4.8	0
+24	67	4.9	0
+24	67	5	0
+24	67	5.1	0
+25	67	0.1	0
+25	67	0.2	0
+25	67	0.3	0
+25	67	0.4	0
+25	67	0.5	0
+25	67	0.6	0
+25	67	0.7	0
+25	67	0.8	0
+25	67	0.9	0
+25	67	1	0
+25	67	1.1	0
+25	67	1.2	0
+25	67	1.3	0
+25	67	1.4	0
+25	67	1.5	0
+25	67	1.6	0
+25	67	1.7	0
+25	67	1.8	0
+25	67	1.9	0
+25	67	2	0
+25	67	2.1	0
+25	67	2.2	0
+25	67	2.3	0
+25	67	2.4	0
+25	67	2.5	0
+25	67	2.6	0
+25	67	2.7	0
+25	67	2.8	0
+25	67	2.9	0
+25	67	3	0
+25	67	3.1	0
+25	67	3.2	0
+25	67	3.3	0
+25	67	3.4	0
+25	67	3.5	0
+25	67	3.6	0
+25	67	3.7	0
+25	67	3.8	0
+25	67	3.9	0
+25	67	4	0
+25	67	4.1	0
+25	67	4.2	0
+25	67	4.3	0
+25	67	4.4	0
+25	67	4.5	0
+25	67	4.6	0
+25	67	4.7	0
+25	67	4.8	0
+25	67	4.9	0
+25	67	5	0
+25	67	5.1	0
+26	67	0.1	0
+26	67	0.2	0
+26	67	0.3	0
+26	67	0.4	0
+26	67	0.5	0
+26	67	0.6	0
+26	67	0.7	0
+26	67	0.8	0
+26	67	0.9	0
+26	67	1	0
+26	67	1.1	0
+26	67	1.2	0
+26	67	1.3	0
+26	67	1.4	0
+26	67	1.5	0
+26	67	1.6	0
+26	67	1.7	0
+26	67	1.8	0
+26	67	1.9	0
+26	67	2	0
+26	67	2.1	0
+26	67	2.2	0
+26	67	2.3	0
+26	67	2.4	0
+26	67	2.5	0
+26	67	2.6	0
+26	67	2.7	0
+26	67	2.8	0
+26	67	2.9	0
+26	67	3	0
+26	67	3.1	0
+26	67	3.2	0
+26	67	3.3	0
+26	67	3.4	0
+26	67	3.5	0
+26	67	3.6	0
+26	67	3.7	0
+26	67	3.8	0
+26	67	3.9	0
+26	67	4	0
+26	67	4.1	0
+26	67	4.2	0
+26	67	4.3	0
+26	67	4.4	0
+26	67	4.5	0
+26	67	4.6	0
+26	67	4.7	0
+26	67	4.8	0
+26	67	4.9	0
+26	67	5	0
+26	67	5.1	0
+27	67	0.1	0
+27	67	0.2	0
+27	67	0.3	0
+27	67	0.4	0
+27	67	0.5	0
+27	67	0.6	0
+27	67	0.7	0
+27	67	0.8	0
+27	67	0.9	0
+27	67	1	0
+27	67	1.1	0
+27	67	1.2	0
+27	67	1.3	0
+27	67	1.4	0
+27	67	1.5	0
+27	67	1.6	0
+27	67	1.7	0
+27	67	1.8	0
+27	67	1.9	0
+27	67	2	0
+27	67	2.1	0
+27	67	2.2	0
+27	67	2.3	0
+27	67	2.4	0
+27	67	2.5	0
+27	67	2.6	0
+27	67	2.7	0
+27	67	2.8	0
+27	67	2.9	0
+27	67	3	0
+27	67	3.1	0
+27	67	3.2	0
+27	67	3.3	0
+27	67	3.4	0
+27	67	3.5	0
+27	67	3.6	0
+27	67	3.7	0
+27	67	3.8	0
+27	67	3.9	0
+27	67	4	0
+27	67	4.1	0
+27	67	4.2	0
+27	67	4.3	0
+27	67	4.4	0
+27	67	4.5	0
+27	67	4.6	0
+27	67	4.7	0
+27	67	4.8	0
+27	67	4.9	0
+27	67	5	0
+27	67	5.1	0
+28	67	0.1	0
+28	67	0.2	0
+28	67	0.3	0
+28	67	0.4	0
+28	67	0.5	0
+28	67	0.6	0
+28	67	0.7	0
+28	67	0.8	0
+28	67	0.9	0
+28	67	1	0
+28	67	1.1	0
+28	67	1.2	0
+28	67	1.3	0
+28	67	1.4	0
+28	67	1.5	0
+28	67	1.6	0
+28	67	1.7	0
+28	67	1.8	0
+28	67	1.9	0
+28	67	2	0
+28	67	2.1	0
+28	67	2.2	0
+28	67	2.3	0
+28	67	2.4	0
+28	67	2.5	0
+28	67	2.6	0
+28	67	2.7	0
+28	67	2.8	0
+28	67	2.9	0
+28	67	3	0
+28	67	3.1	0
+28	67	3.2	0
+28	67	3.3	0
+28	67	3.4	0
+28	67	3.5	0
+28	67	3.6	0
+28	67	3.7	0
+28	67	3.8	0
+28	67	3.9	0
+28	67	4	0
+28	67	4.1	0
+28	67	4.2	0
+28	67	4.3	0
+28	67	4.4	0
+28	67	4.5	0
+28	67	4.6	0
+28	67	4.7	0
+28	67	4.8	0
+28	67	4.9	0
+28	67	5	0
+28	67	5.1	0
+29	67	0.1	0
+29	67	0.2	0
+29	67	0.3	0
+29	67	0.4	0
+29	67	0.5	0
+29	67	0.6	0
+29	67	0.7	0
+29	67	0.8	0
+29	67	0.9	0
+29	67	1	0
+29	67	1.1	0
+29	67	1.2	0
+29	67	1.3	0
+29	67	1.4	0
+29	67	1.5	0
+29	67	1.6	0
+29	67	1.7	0
+29	67	1.8	0
+29	67	1.9	0
+29	67	2	0
+29	67	2.1	0
+29	67	2.2	0
+29	67	2.3	0
+29	67	2.4	0
+29	67	2.5	0
+29	67	2.6	0
+29	67	2.7	0
+29	67	2.8	0
+29	67	2.9	0
+29	67	3	0
+29	67	3.1	0
+29	67	3.2	0
+29	67	3.3	0
+29	67	3.4	0
+29	67	3.5	0
+29	67	3.6	0
+29	67	3.7	0
+29	67	3.8	0
+29	67	3.9	0
+29	67	4	0
+29	67	4.1	0
+29	67	4.2	0
+29	67	4.3	0
+29	67	4.4	0
+29	67	4.5	0
+29	67	4.6	0
+29	67	4.7	0
+29	67	4.8	0
+29	67	4.9	0
+29	67	5	0
+29	67	5.1	0
+

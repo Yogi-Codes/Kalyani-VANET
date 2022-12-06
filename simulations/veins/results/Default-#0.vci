@@ -1,0 +1,146 @@
+file 7375 1670309070                                            
+version 2
+run Default-0-20221206-06:43:17-18604
+attr configname Default
+attr datetime 20221206-06:43:17
+attr experiment Default
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network RSUExampleScenario
+attr processid 18604
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param *.playgroundSizeX 25000m
+param *.playgroundSizeY 25000m
+param *.playgroundSizeZ 50000m
+param *.annotations.draw true
+param *.obstacles.obstacles "xmldoc(\"config.xml\", \"//AnalogueModel[@type='SimpleObstacleShadowing']/obstacles\")"
+param *.manager.updateInterval 1s
+param *.manager.host "\"localhost\""
+param *.manager.port 9999
+param *.manager.autoShutdown true
+param *.manager.launchConfig "xmldoc(\"erlangen.launchd.xml\")"
+param *.rsu[0].mobility.x 2000
+param *.rsu[0].mobility.y 2000
+param *.rsu[0].mobility.z 3
+param *.rsu[1].mobility.x 3000
+param *.rsu[1].mobility.y 3000
+param *.rsu[1].mobility.z 3
+param *.rsu[2].mobility.x 4000
+param *.rsu[2].mobility.y 4000
+param *.rsu[2].mobility.z 3
+param *.rsu[*].applType "\"TraCIDemoRSU11p\""
+param *.rsu[*].appl.headerLength "80 bit"
+param *.rsu[*].appl.sendBeacons true
+param *.rsu[*].appl.dataOnSch true
+param *.rsu[*].appl.beaconInterval 10s
+param *.rsu[*].appl.beaconUserPriority 7
+param *.rsu[*].appl.dataUserPriority 5
+param *.rsu[*].nic.phy80211p.antennaOffsetZ "0 m"
+param *.connectionManager.sendDirect true
+param *.connectionManager.maxInterfDist 5000m
+param *.connectionManager.drawMaxIntfDist false
+param *.**.nic.mac1609_4.useServiceChannel false
+param *.**.nic.mac1609_4.txPower 20mW
+param *.**.nic.mac1609_4.bitrate 6Mbps
+param *.**.nic.phy80211p.minPowerLevel -110dBm
+param *.**.nic.phy80211p.useNoiseFloor true
+param *.**.nic.phy80211p.noiseFloor -98dBm
+param *.**.nic.phy80211p.decider "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.analogueModels "xmldoc(\"config.xml\")"
+param *.**.nic.phy80211p.usePropagationDelay true
+param *.**.nic.phy80211p.antenna "xmldoc(\"antenna.xml\", \"/root/Antenna[@id='monopole']\")"
+param *.node[*].nic.phy80211p.antennaOffsetY "0 m"
+param *.node[*].nic.phy80211p.antennaOffsetZ "1.895 m"
+param *.node[*].numApps 1
+param *.node[*].app[0].typename "\"EC.src.VeinsInetEcApplication.cc\""
+param *.node[*].app[0].interface "\"wlan0\""
+param *.node[*].wlan[0].opMode "\"p\""
+param *.node[*].wlan[0].radio.typename "\"Ieee80211DimensionalRadio\""
+param *.node[*].wlan[0].radio.bandName "\"5.9 GHz\""
+param *.node[*].wlan[0].radio.channelNumber 3
+param *.node[*].wlan[0].radio.transmitter.power 20mW
+param *.node[*].wlan[0].radio.bandwidth "10 MHz"
+param *.node[*].wlan[*].radio.antenna.mobility.typename "\"AttachedMobility\""
+param *.node[*].wlan[*].radio.antenna.mobility.mobilityModule "\"^.^.^.^.mobility\""
+param *.node[*].wlan[*].radio.antenna.mobility.offsetX -2.5m
+param *.node[*].wlan[*].radio.antenna.mobility.offsetZ 1.5m
+param *.node[*].wlan[*].radio.antenna.mobility.constraintAreaMinX 0m
+param *.node[*].wlan[*].radio.antenna.mobility.constraintAreaMaxX 0m
+param *.node[*].wlan[*].radio.antenna.mobility.constraintAreaMinY 0m
+param *.node[*].wlan[*].radio.antenna.mobility.constraintAreaMaxY 0m
+param *.node[*].wlan[*].radio.antenna.mobility.constraintAreaMinZ 0m
+param *.node[*].wlan[*].radio.antenna.mobility.constraintAreaMaxZ 0m
+param *.node[*].applType "\"TraCIDemo11p\""
+param *.node[*].appl.headerLength "80 bit"
+param *.node[*].appl.sendBeacons false
+param *.node[*].appl.dataOnSch false
+param *.node[*].appl.beaconInterval 1s
+param *.node[*].veinsmobility.x 0
+param *.node[*].veinsmobility.y 0
+param *.node[*].veinsmobility.z 0
+param *.node[*].veinsmobility.setHostSpeed false
+param *.node[*0].veinsmobility.accidentCount 3
+param *.node[*0].veinsmobility.accidentStart 10s
+param *.node[*0].veinsmobility.accidentDuration 15s
+param *.node[*].ipv4.configurator.typename "\"HostAutoConfigurator\""
+param *.node[*].ipv4.configurator.interfaces "\"wlan0\""
+param *.node[*].ipv4.configurator.mcastGroups "\"224.0.0.1\""
+param *.node[*].mobility.typename "\"VeinsInetMobility\""
+
+vector 0 RSUExampleScenario.node[0].veinsmobility posx ETV
+vector 1 RSUExampleScenario.node[0].veinsmobility posy ETV
+vector 2 RSUExampleScenario.node[1].veinsmobility posx ETV
+vector 3 RSUExampleScenario.node[1].veinsmobility posy ETV
+vector 4 RSUExampleScenario.node[0].veinsmobility speed ETV
+vector 5 RSUExampleScenario.node[2].veinsmobility posx ETV
+vector 6 RSUExampleScenario.node[2].veinsmobility posy ETV
+vector 7 RSUExampleScenario.node[0].veinsmobility acceleration ETV
+vector 8 RSUExampleScenario.node[0].veinsmobility co2emission ETV
+vector 9 RSUExampleScenario.node[1].veinsmobility speed ETV
+vector 10 RSUExampleScenario.node[3].veinsmobility posx ETV
+vector 11 RSUExampleScenario.node[3].veinsmobility posy ETV
+vector 12 RSUExampleScenario.node[1].veinsmobility acceleration ETV
+vector 13 RSUExampleScenario.node[1].veinsmobility co2emission ETV
+vector 14 RSUExampleScenario.node[2].veinsmobility speed ETV
+vector 15 RSUExampleScenario.node[4].veinsmobility posx ETV
+vector 16 RSUExampleScenario.node[4].veinsmobility posy ETV
+vector 17 RSUExampleScenario.node[2].veinsmobility acceleration ETV
+vector 18 RSUExampleScenario.node[2].veinsmobility co2emission ETV
+vector 19 RSUExampleScenario.node[3].veinsmobility speed ETV
+vector 20 RSUExampleScenario.node[5].veinsmobility posx ETV
+vector 21 RSUExampleScenario.node[5].veinsmobility posy ETV
+vector 22 RSUExampleScenario.node[3].veinsmobility acceleration ETV
+vector 23 RSUExampleScenario.node[3].veinsmobility co2emission ETV
+vector 24 RSUExampleScenario.node[4].veinsmobility speed ETV
+0	5623 134 2 38 1 6 6 728.41501707009 742.9805884986 4420.1727709525 3256482.2473797
+1	5757 135 2 38 1 6 6 1734.2578274443 1762.6579699199 10479.075899883 18302450.805305
+2	5892 113 3 38 2 6 5 3272.7258335312 3285.3660567401 16400.202647254 53793433.054917
+3	6005 110 3 38 2 6 5 1968.2462604753 1989.9998989963 9887.0570736749 19551086.59619
+4	6115 112 3 38 2 6 5 4.0186940901658 9.9754498863754 34.594891124745 259.28037447905
+5	6227 91 4 38 3 6 4 1482.6016340364 1495.9503842167 5960.625899966 8882367.270329
+6	6318 91 4 38 3 6 4 2391.1663249183 2399.0829388279 9582.587204925 22956530.257148
+7	6409 81 4 38 3 6 4 -3.08 2.0845199351824 2.8767557962096 21.368178075044
+8	6490 80 4 38 3 6 4 0.973 6.6942756981622 17.077205513361 91.250594335287
+9	6570 91 4 38 3 6 4 4.1624601069549 9.9926469679074 28.635881442233 224.12610151484
+10	6661 72 36 38 4 6 3 2947.6103404344 2954.0865707475 8851.7702547806 26117966.919118
+11	6733 72 36 38 4 6 3 2969.8387931457 2975.0747362313 8917.9969614445 26510237.237469
+12	6805 71 36 38 4 6 3 1.727413257109 2.0530805496173 5.8301868609525 11.400337920596
+13	6876 72 36 38 4 6 3 4.5074224831771 5.8442253739536 15.995350097369 86.323202639883
+14	6948 72 36 38 4 6 3 3.9840510474849 8.1390678800508 18.250695692665 119.6642857176
+15	7020 48 37 38 5 6 2 1868.8344722672 1871.4829406306 3740.3174128979 6994990.6818059
+16	7068 48 37 38 5 6 2 1627.9688304019 1629.4863140695 3257.4551444714 5305508.1604999
+17	7116 47 37 38 5 6 2 2.0114911149209 2.143525717645 4.1550168325659 8.6407990076112
+18	7163 48 37 38 5 6 2 4.5922912501576 5.4980070759717 10.090298326129 51.317220733709
+19	7211 47 37 38 5 6 2 4.0331918461099 5.988227880694 10.021419726804 52.125509618648
+20	7258 22 38 38 6 6 1 2154.94683885 2154.94683885 2154.94683885 4643795.8782697
+21	7280 24 38 38 6 6 1 3517.0576081193 3517.0576081193 3517.0576081193 12369694.21883
+22	7304 23 38 38 6 6 1 1.955036034584 1.955036034584 1.955036034584 3.8221658965221
+23	7327 24 38 38 6 6 1 4.2401442427548 4.2401442427548 4.2401442427548 17.978823199367
+24	7351 23 38 38 6 6 1 3.887992514905 3.887992514905 3.887992514905 15.116485795957
+

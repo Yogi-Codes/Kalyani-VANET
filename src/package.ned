@@ -1,0 +1,3 @@
+package ec;
+
+@license(LGPL);
